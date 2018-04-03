@@ -1,0 +1,302 @@
+body{
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+#now{
+	width: 100%;
+	height: 13.8rem;
+	/*设置背景渐变*/
+	background: url('../img/screen.png'),linear-gradient(#3FBEFF,#48E3FF);
+	background-repeat: no-repeat;
+	background-size: 100%; 
+	/*图片放到页面下端*/
+	background-position: bottom center;
+}
+.now_city{
+	line-height: 1.57rem;
+	font-size: 0.36rem;
+	color: #fff;
+	text-align: center;
+}
+.now_air{
+	width: 2.1rem;
+	background-color: #F1AB62;
+	height: 1.26rem;
+	margin-top: 0.05rem;
+	margin-left: 0.26rem;
+	/* 圆角边框 */
+	border-radius: 0.2rem; 
+	padding-top: 0.31rem;	
+}
+.now_air h1,.now_air h2{
+	font-size: 0.36rem;
+	color: #fff;
+	text-align: center;
+}
+.now_tem{
+	font-size: 0.96rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.77rem;
+	line-height: 0.96rem;
+}
+.now_weather{
+	font-size: 0.51rem;
+	line-height: 0.51rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.9rem;
+}
+.now_wind_box{
+	font-size: 0.32rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.54rem;
+	line-height: 0.32rem;
+}
+.now_notice{
+	font-size: 0.32rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 1.48rem;
+	line-height: 0.32rem;
+}
+#future{
+	width: 100%;
+	height: 3.09rem;
+	background-color: #fff;
+	border-bottom: .03rem solid #e4e4e4;
+	padding: .72rem .58rem;  
+}
+.future_box{
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding: 0 .58rem;
+	font-size: .32rem;
+}
+.today{
+	float: left;
+	border-right: .03rem solid #e4e4e4;
+}
+.future_top{
+	width: 100%;
+	height: 50%;
+}
+.future_date{
+	float: left;
+}
+.future_top p{
+	float: right;
+}
+.today_img,.tomorrow_img{
+	width: .72rem;
+	height: .72rem;
+
+	float: right;
+}
+#hours{
+	width: 100%;
+	height: 3.9rem;
+	background-color: #fff;
+	border-bottom: .03rem solid #e4e4e4;
+	border-top: .03rem solid #e4e4e4;
+	margin-top: .3rem;
+	display: flex;
+	/* 水平滑动 */
+	overflow-x: scroll;
+}
+#hours li{
+	width: 2rem;
+	height:3.9rem;
+	/*background-color: pink;*/
+	/* 竖排 */
+	display: flex;
+	/* 换行 */
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-around;
+	padding: .7rem 0;
+	flex-shrink: 0;
+}
+.hours_img{
+	width: 1rem;
+	height: 1rem;
+	padding: 0 .4rem;
+	box-sizing: content-box;
+}
+.hours_times,.hours_temp{
+	font-size: .26rem;
+}
+#hours::-webkit-scrollbar,#weeks{
+	display: none;
+	display: block;
+}
+#weeks{
+	width: 100%;
+	height: 11.19rem;
+	background-color: #fff;
+	border-bottom: .03rem solid #e4e4e4;
+	border-top: .03rem solid #e4e4e4;
+	margin-top: .3rem;
+	display: flex;
+	/* 水平滑动 */
+	overflow-x: scroll;
+}
+/* 滚动条隐藏  block显示  none消失*/
+#weeks li{
+	width: 2.3rem;
+	height: 100%;
+	/*background-color: pink;*/
+	/* 竖排 */
+	display: flex;
+	/* 换行 */
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-around;
+	padding: .7rem .1rem;
+	flex-shrink: 0;
+}
+.weeks_img{
+	width: 1rem;
+	height: 1rem;
+	padding: 0 .4rem;
+	box-sizing: content-box;
+}
+.weeks_img img{
+	width: .5rem;
+	height: .5rem;
+	float: left;
+}
+.weeks_date,.weeks_weather,.weeks_wind,.weeks_wind_leavel{
+	font-size: .29rem;
+}
+.weeks_maxtem,.weeks_mintem{
+	font-size: .26rem;
+	width: 100%;
+	text-align: center;
+}
+.weeks_wind_leavel{
+	width: 100%;
+	text-align: center;
+}
+#cities{
+	/* 撑开一屏大小 */
+	width: 100vw;
+	height: 100vh;
+	background-color: #F6F6F6;
+	position: absolute;
+	left: 0;
+	top: 0; 
+	bottom: 0;
+	margin: auto;
+	z-index: 999;
+	display: none;
+	/* 弹出框以外不显示 */
+	position: fixed;
+	overflow-x: scroll;
+	/*background-color: plum;*/
+}
+/*#cities:hover{*/
+	/*z-index: -1;*/
+	/*transition: 10s linear,opacity 0.1s linear;*/
+	/*display: block;*/
+/*}*/
+header{
+	width: 100%;
+	height: 1.29rem;
+	background-color: #fff;
+	padding: 0 .29rem;
+	display: flex;
+	flex-wrap: wrap;
+	/* 单行 */
+	align-items: center;
+}
+.search{
+	width: 9.03rem;
+	height: .87rem;
+	background-color: #E2E2E2;
+	border: 0;
+	border-radius: .2rem;
+	padding-left: .2rem;
+	outline: none;
+}
+.btn{
+	font-size: .42rem;
+	color: #76A9FF; 
+	margin-left: .22rem;
+}
+.cities_boxs{
+	width: 100%;
+	/*display: flex;
+	flex-wrap: wrap;*/
+	/* 单行 */
+	align-items: center;
+	padding: .14rem .32rem;
+}
+.cities_remen_top{
+	width: 100%;
+	height: .44rem;
+}
+.cities_remen_top h1{
+	font-size: .46rem;
+	color: #999999;
+	line-height: .44rem;
+	float: left;
+}
+.cities_remen_bottom{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cities_remen_bottom2{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.area{
+	width: 2.34rem;
+	height: .84rem;
+	border: .03rem solid #E0E0E0;
+	background-color: #FFFFFF;
+	border-radius: .2rem;
+	line-height: .84rem;
+	margin-top: .39rem;
+	text-align: center;
+	margin-right: .39rem; 
+	float: left;
+}
+.area2{
+	margin-right: 0;
+}
+.cities_pbottom{
+	padding-top: .56rem;
+	width:100vw;
+	height: 52vh;
+	margin-bottom: .2rem;
+}
+.cities_pbottom_top{
+	width: 100%;
+	height: .44rem;
+	margin-bottom: .2rem;
+}
+.cities_pbottom_top h1{
+	font-size: .46rem;
+	color: #999999;
+	line-height: .44rem;
+	/*float: left;*/
+}
+.cities_province{
+	width: 2.34rem;
+	height: .84rem;
+	font-size: .24rem;
+	color: #999999;
+	border: .03rem solid #E0E0E0;
+	background-color: #FFFFFF;
+	border-radius: .2rem;
+	line-height: .84rem;
+	margin-right: .1rem;
+	margin-bottom: .2rem;
+	text-align: center;
+	float: left;
+}
