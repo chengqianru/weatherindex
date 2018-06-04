@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'iconfont';  /* project id 562003 */
+	src: url('https://at.alicdn.com/t/font_562003_85pjdlg653qe61or.eot');
+	src: url('https://at.alicdn.com/t/font_562003_85pjdlg653qe61or.eot?#iefix') format('embedded-opentype'),
+	url('https://at.alicdn.com/t/font_562003_85pjdlg653qe61or.woff') format('woff'),
+	url('https://at.alicdn.com/t/font_562003_85pjdlg653qe61or.ttf') format('truetype'),
+	url('https://at.alicdn.com/t/font_562003_85pjdlg653qe61or.svg#iconfont') format('svg');
+}
 body{
 	font-size: 12px;
 	background-color: #F5F5F5;
@@ -11,6 +19,10 @@ body{
 	background-size: 100%; 
 	/*图片放到页面下端*/
 	background-position: bottom center;
+}
+.address_icon{
+	font-family: 'iconfont';
+	color: orange;
 }
 .now_city{
 	line-height: 1.57rem;
@@ -32,6 +44,8 @@ body{
 	font-size: 0.36rem;
 	color: #fff;
 	text-align: center;
+	line-height: 0.27rem;
+	margin-bottom: .1rem;
 }
 .now_tem{
 	font-size: 0.96rem;
@@ -59,7 +73,7 @@ body{
 	color: #fff;
 	text-align: center;
 	margin-top: 1.48rem;
-	line-height: 0.32rem;
+	line-height: 0.42rem;
 }
 #future{
 	width: 100%;
@@ -120,13 +134,16 @@ body{
 	flex-shrink: 0;
 }
 .hours_img{
-	width: 1rem;
+	/*width: 1rem;*/
 	height: 1rem;
 	padding: 0 .4rem;
 	box-sizing: content-box;
 }
 .hours_times,.hours_temp{
 	font-size: .26rem;
+}
+.hours_temp{
+	margin-top: .1rem;
 }
 #hours::-webkit-scrollbar,#weeks{
 	display: none;
@@ -197,11 +214,6 @@ body{
 	overflow-x: scroll;
 	/*background-color: plum;*/
 }
-/*#cities:hover{*/
-	/*z-index: -1;*/
-	/*transition: 10s linear,opacity 0.1s linear;*/
-	/*display: block;*/
-/*}*/
 header{
 	width: 100%;
 	height: 1.29rem;
@@ -299,4 +311,8 @@ header{
 	margin-bottom: .2rem;
 	text-align: center;
 	float: left;
+}
+.cities_fenctiy{
+	height: auto;
+	overflow: hidden;
 }
