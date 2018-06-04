@@ -284,7 +284,7 @@ header{
 .cities_pbottom{
 	padding-top: .56rem;
 	width:100vw;
-	height: 52vh;
+	height: auto;
 	margin-bottom: .2rem;
 }
 .cities_pbottom_top{
