@@ -211,7 +211,8 @@ body{
 	display: none;
 	/* 弹出框以外不显示 */
 	position: fixed;
-	overflow-x: scroll;
+	overflow:hidden;
+	overflow-y: scroll;
 	/*background-color: plum;*/
 }
 header{
@@ -223,6 +224,10 @@ header{
 	flex-wrap: wrap;
 	/* 单行 */
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
 }
 .search{
 	width: 9.03rem;
@@ -240,9 +245,9 @@ header{
 }
 .cities_boxs{
 	width: 100%;
-	/*display: flex;
-	flex-wrap: wrap;*/
-	/* 单行 */
+	position: absolute;
+	top: 1.29rem;
+	left: 0;
 	align-items: center;
 	padding: .14rem .32rem;
 }
